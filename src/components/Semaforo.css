@@ -1,0 +1,67 @@
+.semaforo {
+  background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 8px 6px;
+  box-shadow: 
+    0 6px 15px rgba(0, 0, 0, 0.9),
+    inset 0 1px 2px rgba(255, 255, 255, 0.1);
+  min-width: 60px;
+}
+
+.semaforo h3 {
+  margin: 0 0 6px 0;
+  color: #ffcc00;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.luces {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  background: #000000;
+  padding: 8px 6px;
+  border-radius: 6px;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.luz {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  opacity: 0.15;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.luz.activa {
+  opacity: 1;
+  box-shadow: 
+    0 0 20px currentColor,
+    0 0 35px currentColor,
+    0 0 50px currentColor,
+    inset 0 0 12px rgba(255, 255, 255, 0.7);
+  border-color: currentColor;
+  transform: scale(1.05);
+}
+
+.luz.roja {
+  background: radial-gradient(circle at 40% 40%, #ff4444, #bb0000);
+  color: #ff0000;
+}
+
+.luz.amarilla {
+  background: radial-gradient(circle at 40% 40%, #ffff44, #cccc00);
+  color: #ffff00;
+}
+
+.luz.verde {
+  background: radial-gradient(circle at 40% 40%, #44ff44, #00bb00);
+  color: #00ff00;
+}
